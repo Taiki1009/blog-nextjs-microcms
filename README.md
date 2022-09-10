@@ -1,5 +1,25 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### Next.jsとmicroCMSで作るブログサイト
+- 概要
+  - ブログ一覧ページとブログ詳細ページ
+  - vercelにアップロードし、webhookでmicroCMSと連携
+```bash
+npm i microcms-js-sdk
+npm i sass
+```
+microCMSにログインしてAPI＿KEYとエンドポイントを取得し、libs/client.jsに設定する
+```js
+cerateClient({
+  serviceDomain: "{endpoint}",
+  apiKey: process.env.API_KEY, // セキュリティ上、`.env.local`に設定する
+})
+```
+
+- 今後
+  - 読書感想や学習内容を投稿
+  - 別ページを作成してReactの練習
+
 ## Getting Started
 
 First, run the development server:
