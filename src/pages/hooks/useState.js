@@ -57,20 +57,20 @@ export default function App() {
 
   return (
     <>
-      <div className={styles.container} id='count-container'>
+      <div id='count-container'>
         <p>Count: {count}</p>
         <button onClick={increment}>+</button>
         <button onClick={decrement}>-</button>
       </div>
 
-      <div className={styles.container} id='vote-container'>
+      <div id='vote-container'>
         <p>きのこ: {vote.kinoko}</p>
         <p>たけのこ: {vote.takenoko}</p>
         <button onClick={voteKinoko}>+きのこ</button>
         <button onClick={voteTakenoko}>+たけのこ</button>
       </div>
 
-      <div className={styles.container} id='array-container'>
+      <div id='array-container'>
         <button onClick={addItem}>「きのこ」か「たけのこ」を追加</button>
         <ul>
           {items.map((item, index) => (

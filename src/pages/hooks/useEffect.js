@@ -62,12 +62,12 @@ export default function App() {
 
   return (
     <>
-      <div className={styles.container} id='count'>
+      <div id='count'>
         <p id='effectHook'>You clicked {count} times</p>
         <button onClick={() => setCount(count + 1)}>+</button>
       </div>
 
-      <div className={styles.container} id='fetchData'>
+      <div id='fetchData'>
         {isLoading ? (
           <p>Loading</p>
         ) : (
@@ -81,7 +81,7 @@ export default function App() {
         )}
       </div>
 
-      <div className={styles.container}>
+      <div>
         <button onClick={() => setVisible(!visible)}>toggle Timer</button>
         {visible ? <Timer /> : ""}
       </div>
