@@ -10,6 +10,8 @@ module.exports = {
         body: "#222",
         "selected-text": "#a3a3ff",
         theme: "#5c318c",
+        secondary: "#9191a4",
+        badge: '#3F3F51',
       },
     },
     fontFamily: {
