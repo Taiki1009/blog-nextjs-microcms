@@ -12,6 +12,8 @@ module.exports = {
         theme: "#5c318c",
         secondary: "#9191a4",
         badge: '#3F3F51',
+        inputBorder: "#56566",
+        input: "#2a2a33",
       },
     },
     fontFamily: {

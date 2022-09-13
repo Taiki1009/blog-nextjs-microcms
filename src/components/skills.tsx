@@ -1,7 +1,7 @@
 
 const Skills = () => {
   return(
-    <div className="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div className="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="skills">
       <section className="w-full">
         <h2 className="secondary-title">スキルスタック</h2>
         <p className="section-paragraph">私は以下のプログラミング言語を扱ってきました</p>
@@ -48,7 +48,7 @@ const Skills = () => {
           <div className="w-full border border-purple-300 p-16 lg:px-32 lg;py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-orange-300 transition-all duration-300 cursor-pointer">
             {/* 言語のロゴ */}
             <div className="mb-6 lg:mb-0 self-center">
-              <i className="fa-brands fa-html5 text-9xl text-blue-300"></i>
+              <i className="fa-brands fa-html5 text-9xl text-orange-300"></i>
             </div>
 
             {/* スキルの説明 */}

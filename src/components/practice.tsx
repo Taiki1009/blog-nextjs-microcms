@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import humanImg from '../../public/human.jpg'
 
 const Practice = () => {
   return (
@@ -19,7 +18,7 @@ const Practice = () => {
         </div>
         {/* [FIXME] 透過させたimageを使用する。 */}
         <div className="block w-10/12 mt-12 right-6 md:w-3/5 md:mt-0 lg:w-3/6 lg:top-2 lg:right-52 -z-10">
-          <Image src={humanImg} className="w-10/12 md:w-3/5 lg:w-3/6 mt-12 right-6 md:mt-0 lg:top-2 lg:right-52 -z-10" layout="fill" objectFit='contain' alt="image" />
+          <Image src={"/../public/images/human.jpg"} className="w-10/12 md:w-3/5 lg:w-3/6 mt-12 right-6 md:mt-0 lg:top-2 lg:right-52 -z-10" layout="fill" objectFit='contain' alt="image" />
           {/* <Image src={humanImg} className="w-10/12 md:w-3/5 lg:w-3/6 mt-12 right-6 md:mt-0 lg:top-2 lg:right-52 -z-10" layout="fill" objectFit='contain' alt="image" /> */}
         </div>
       </div>
