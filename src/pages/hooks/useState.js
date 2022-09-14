@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styles from '../../../styles/Home.module.scss'
 
 export default function App() {
   const [count, setCount] = useState(0);

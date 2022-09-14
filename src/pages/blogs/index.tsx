@@ -24,7 +24,8 @@ const Blogs: NextPage<BlogListProps> = (props: any) => {
   const { blogList } = props
 
   return (
-    <div>
+    <div className="blogList">
+      <h3>投稿一覧</h3>
       {blogList.map((blog: BlogProps) => (
         <li key={blog.id}>
           <Link href={`blogs/${blog.id}`}>

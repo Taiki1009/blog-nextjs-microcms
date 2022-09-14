@@ -9,11 +9,15 @@ type BlogProps = {
 
 const BlogId: NextPage<BlogProps> = (props) => {
   const { title, content, publishedAt } = props.blog
+  const publishDate = () => {
+    let date = new Date(publishedAt)
+    return (`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`)
+  }
 
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.publishedAt}>{publishedAt}</p>
+    <main className="mt-16 mb-20 mx-auto w-4/5">
+      <h1 className="mb-10 text-4xl font-bold">{title}</h1>
+      <p className="mb-10 text-right">投稿日: {publishDate()}</p>
       <div
         dangerouslySetInnerHTML={{ __html: `${content}` }}
         className={styles.post}

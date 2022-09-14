@@ -22,3 +22,11 @@ body {
 .badge {
   @apply px-4 py-2 text-sm bg-badge;
 }
+
+.blogList {
+  @apply w-4/5 mx-auto mt-10;
+}
+
+.blogList h3 {
+  @apply text-2xl font-bold mt-10 mb-4 mx-0 border-b-2 border-solid border-neutral-400;
+}
