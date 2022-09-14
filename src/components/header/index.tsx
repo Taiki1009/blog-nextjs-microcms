@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full">
         <div className="text-3xl font-bold">
           <Link href="/">
-            <a href="" className="hover:text-selected-text transition-all duration-300">T's Blog</a>
+            <a href="" className="hover:text-selected-text transition-all duration-300">{"T's Blog"}</a>
           </Link>
         </div>
         <div className="space-x-12 hidden md:flex items-center">
