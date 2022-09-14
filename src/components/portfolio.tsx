@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Portfolio = () => {
   return (
-  <div className="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="portfolio">
+  <div className="container mt-32 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="portfolio">
     <section className="w-full">
       <h2 className="secondary-title">私のポートフォリオ</h2>
       <p className="section-paragraph">私が作ってきたWebアプリケーションはこちら</p>

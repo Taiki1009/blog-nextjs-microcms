@@ -1,4 +1,4 @@
-import Practice from "components/practice"
+import Hero from "components/hero"
 import Portfolio from "components/portfolio"
 import Skills from "components/skills"
 import Contact from "components/contact"
@@ -6,7 +6,7 @@ import Contact from "components/contact"
 const Home = () => {
   return (
     <>
-      <Practice />
+      <Hero />
       <Portfolio />
       <Skills />
       <Contact />
