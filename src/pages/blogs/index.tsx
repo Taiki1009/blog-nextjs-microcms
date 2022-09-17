@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { client } from "../../../libs/client"
 import { GetStaticProps, NextPage } from "next";
+import Layout from "components/Home/layouts/layout";
 
 interface BlogProps {
   id: string
@@ -24,16 +25,18 @@ const Blogs: NextPage<BlogListProps> = (props: any) => {
   const { blogList } = props
 
   return (
-    <div className="blogList">
-      <h3>投稿一覧</h3>
-      {blogList.map((blog: BlogProps) => (
-        <li key={blog.id}>
-          <Link href={`blogs/${blog.id}`}>
-            <a href="">{blog.title}</a>
-          </Link>
-        </li>
-      ))}
-    </div>
+    <Layout>
+      <div className="blogList">
+        <h3>投稿一覧</h3>
+        {blogList.map((blog: BlogProps) => (
+          <li key={blog.id}>
+            <Link href={`blogs/${blog.id}`}>
+              <a href="">{blog.title}</a>
+            </Link>
+          </li>
+        ))}
+      </div>
+    </Layout>
   )
 }
 
