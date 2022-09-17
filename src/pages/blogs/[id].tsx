@@ -2,7 +2,6 @@ import { client } from "../../../libs/client";
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { Blog } from "types/blog";
 import styles from "styles/Home.module.scss";
-import Layout from "@HomeComponents/layouts/layout";
 
 type BlogProps = {
   blog: Blog
@@ -16,16 +15,14 @@ const BlogId: NextPage<BlogProps> = (props) => {
   }
 
   return (
-    <Layout>
-      <main className="mt-16 mb-20 mx-auto w-4/5">
-        <h1 className="mb-10 text-4xl font-bold">{title}</h1>
-        <p className="mb-10 text-right">投稿日: {publishDate()}</p>
-        <div
-          dangerouslySetInnerHTML={{ __html: `${content}` }}
-          className={styles.post}
-          ></div>
-      </main>
-    </Layout>
+    <main className="mt-16 mb-20 mx-auto w-4/5">
+      <h1 className="mb-10 text-4xl font-bold">{title}</h1>
+      <p className="mb-10 text-right">投稿日: {publishDate()}</p>
+      <div
+        dangerouslySetInnerHTML={{ __html: `${content}` }}
+        className={styles.post}
+        ></div>
+    </main>
   )
 }
 

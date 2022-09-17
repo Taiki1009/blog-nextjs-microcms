@@ -3,7 +3,7 @@ import Footer from "./footer";
 import Image from "next/image";
 
 // [FIXME] 一度通してからTsの方定義を行う
-const Layout = ({ children }: any) => {
+const HomeLayout = ({ children }: any) => {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ const Layout = ({ children }: any) => {
   )
 }
 
-export default Layout
+export default HomeLayout

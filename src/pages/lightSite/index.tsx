@@ -1,10 +1,9 @@
+import Hero from "@LightSiteComponents/hero"
 
 const LightSite = () => {
   return (
-    <>1
-    </>
+    <Hero title={'CUBE'} subtitle={'アウトプットしていくサイト'} imageOn />
   )
-
 }
 
 export default LightSite
