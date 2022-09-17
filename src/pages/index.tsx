@@ -1,5 +1,5 @@
-import Hero from "@HomeComponents/hero"
-import BlackSite from "@HomeComponents/index"
+import Hero from '@HomeComponents/hero'
+import BlackSite from '@HomeComponents/index'
 
 const Home = () => {
   return (

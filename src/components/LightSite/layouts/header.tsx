@@ -1,5 +1,5 @@
-import Logo from "@LightSiteComponents/logo"
-import Nav from "@LightSiteComponents/nav"
+import Logo from '@LightSiteComponents/logo'
+import Nav from '@LightSiteComponents/nav'
 
 const Header = () => {
   return (

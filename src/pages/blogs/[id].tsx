@@ -1,17 +1,27 @@
-import { client } from "../../../libs/client";
-import { GetStaticProps, GetStaticPaths, NextPage } from "next";
-import { Blog } from "types/blog";
-import styles from "styles/Home.module.scss";
+import {
+  GetStaticProps,
+  GetStaticPaths,
+  NextPage,
+  InferGetStaticPropsType,
+  GetStaticPropsContext,
+} from 'next'
+import PropTypes from 'prop-types'
+import { client } from '../../../libs/client'
+import styles from 'styles/Home.module.scss'
+import { Blog } from 'types/blog'
 
-type BlogProps = {
-  blog: Blog
+export type ApiContext = {
+  apiRootUrl: string
 }
 
-const BlogId: NextPage<BlogProps> = (props) => {
-  const { title, content, publishedAt } = props.blog
+type BlogPageProps = InferGetStaticPropsType<typeof getStaticProps>
+
+const BlogId: NextPage<BlogPageProps> = ({
+  blog: { title, content, publishedAt },
+}) => {
   const publishDate = () => {
-    let date = new Date(publishedAt)
-    return (`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`)
+    const date = new Date(publishedAt)
+    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
   }
 
   return (
@@ -21,16 +31,21 @@ const BlogId: NextPage<BlogProps> = (props) => {
       <div
         dangerouslySetInnerHTML={{ __html: `${content}` }}
         className={styles.post}
-        ></div>
+      ></div>
     </main>
   )
 }
 
 //SSG
-// [FIXME contextの型定義
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const id = context.params.id
-  const data = await client.get({ endpoint: "blogs", contentId: id })
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: GetStaticPropsContext) => {
+  if (!params) {
+    throw new Error('params is undefined')
+  }
+
+  const id = String(params.id)
+  const data = await client.get({ endpoint: 'blogs', contentId: id })
 
   return {
     props: {
@@ -41,13 +56,17 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
 
 // DynamicRouter
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blogs" })
+  const data = await client.get({ endpoint: 'blogs' })
   const paths = data.contents.map((content: Blog) => `/blogs/${content.id}`)
 
   return {
     paths,
     fallback: false,
   }
+}
+
+BlogId.propTypes = {
+  blog: PropTypes.object,
 }
 
 export default BlogId

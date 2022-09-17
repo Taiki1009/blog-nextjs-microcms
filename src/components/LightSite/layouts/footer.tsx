@@ -1,4 +1,4 @@
-import Logo from "@LightSiteComponents/logo"
+import Logo from '@LightSiteComponents/logo'
 
 const Footer = () => {
   return (

@@ -1,9 +1,7 @@
-import Hero from "@LightSiteComponents/hero"
+import Hero from '@LightSiteComponents/hero'
 
 const Blog = () => {
-  return (
-    <Hero title={'Blog'} subtitle={'Recent Posts'} />
-  )
+  return <Hero title={'Blog'} subtitle={'Recent Posts'} />
 }
 
 export default Blog

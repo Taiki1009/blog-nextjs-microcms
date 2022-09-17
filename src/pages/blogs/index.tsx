@@ -1,16 +1,16 @@
-import Link from "next/link";
-import { client } from "../../../libs/client"
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import Link from 'next/link'
+import { client } from '../../../libs/client'
 
 interface BlogProps {
   id: string
   title: string
 }
-type BlogListProps = BlogProps[]
+type BlogPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 //SSG
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const data = await client.get({ endpoint: "blogs" })
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get({ endpoint: 'blogs' })
   console.log(data)
 
   return {
@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   }
 }
 
-const Blogs: NextPage<BlogListProps> = (props: any) => {
+const Blogs: NextPage<BlogPageProps> = (props: BlogPageProps) => {
   const { blogList } = props
 
   return (

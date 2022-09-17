@@ -7,13 +7,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   // 複数サイトを扱う予定なので正規表現でpathをチェックする
   const lightSitePath = /lightSite/
 
-  return (
-    lightSitePath.test(router.pathname)
-    ?
+  return lightSitePath.test(router.pathname) ? (
     <LightSiteLayout>
       <Component {...pageProps} />
     </LightSiteLayout>
-    :
+  ) : (
     <HomeLayout>
       <Component {...pageProps} />
     </HomeLayout>
