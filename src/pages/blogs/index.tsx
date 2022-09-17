@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { client } from "../../../libs/client"
 import { GetStaticProps, NextPage } from "next";
-import Layout from "components/Home/layouts/layout";
+import Layout from "@HomeComponents/layouts/layout";
 
 interface BlogProps {
   id: string

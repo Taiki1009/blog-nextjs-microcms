@@ -1,6 +1,6 @@
-import Hero from "components/Home/hero"
-import BlackSite from "components/Home"
-import Layout from "components/Home/layouts/layout"
+import Hero from "@HomeComponents/hero"
+import BlackSite from "@HomeComponents/index"
+import Layout from "@HomeComponents/layouts/layout"
 
 const Home = () => {
   return (

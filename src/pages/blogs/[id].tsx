@@ -2,7 +2,7 @@ import { client } from "../../../libs/client";
 import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import { Blog } from "types/blog";
 import styles from "styles/Home.module.scss";
-import Layout from "components/Home/layouts/layout";
+import Layout from "@HomeComponents/layouts/layout";
 
 type BlogProps = {
   blog: Blog
