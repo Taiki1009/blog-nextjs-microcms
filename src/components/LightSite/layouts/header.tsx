@@ -3,8 +3,8 @@ import Nav from '@LightSiteComponents/nav'
 
 const Header = () => {
   return (
-    <header>
-      <Logo />
+    <header className='header'>
+      <Logo boxOn />
       <Nav />
     </header>
   )

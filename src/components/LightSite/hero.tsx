@@ -1,3 +1,5 @@
+import styles from 'styles/lightSite/hero.module.css'
+
 type Props = {
   title: string
   subtitle: string
@@ -6,9 +8,9 @@ type Props = {
 
 const Hero = ({ title, subtitle, imageOn = false }: Props) => {
   return (
-    <div className={'my-10'}>
-      <h1 className={'text-4xl font-bold mb-5'}>{title}</h1>
-      <p>{subtitle}</p>
+    <div className={styles.text}>
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.subtitle}>{subtitle}</p>
       {imageOn && <figure>[画像]</figure>}
     </div>
   )

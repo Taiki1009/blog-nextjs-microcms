@@ -1,22 +1,23 @@
 import Link from 'next/link'
+import styles from 'styles/lightSite/nav.module.scss'
 
 const Nav = () => {
   return (
     <nav>
-      <ul className="py-2 px-4">
-        <li className="list-disc">
+      <ul className={styles.list}>
+        <li>
           <Link href="/lightSite">
-            <a className="border-b">Home</a>
+            <a>Home</a>
           </Link>
         </li>
-        <li className="list-disc">
+        <li>
           <Link href="/lightSite/about">
-            <a className="border-b">About</a>
+            <a>About</a>
           </Link>
         </li>
-        <li className="list-disc">
+        <li>
           <Link href="/lightSite/blog">
-            <a className="border-b">Blog</a>
+            <a>Blog</a>
           </Link>
         </li>
       </ul>
