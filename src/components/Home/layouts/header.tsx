@@ -47,6 +47,14 @@ const Header = () => {
               お問合せ
             </a>
           </Link>
+          <Link href="lightSite" as="/lightSite/home">
+            <a
+              href=""
+              className="hover:text-selected-text transition-all duration-300"
+            >
+              LightSite
+            </a>
+          </Link>
         </div>
         <div className="md:hidden">
           <i className="fa-solid fa-bars"></i>

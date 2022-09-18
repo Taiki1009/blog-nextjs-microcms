@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import styles from 'styles/lightSite/nav.module.scss'
+import styles from 'styles/lightSite/nav.module.css'
 
 const Nav = () => {
   return (
     <nav>
       <ul className={styles.list}>
         <li>
-          <Link href="/lightSite">
+          <Link href="/lightSite/home">
             <a>Home</a>
           </Link>
         </li>
@@ -18,6 +18,11 @@ const Nav = () => {
         <li>
           <Link href="/lightSite/blog">
             <a>Blog</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>darkSite</a>
           </Link>
         </li>
       </ul>
