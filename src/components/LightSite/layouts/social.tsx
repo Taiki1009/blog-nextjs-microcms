@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from 'styles/lightSite/social.module.css'
 
 type Props = {
-  iconSize: string
+  iconSize?: string
 }
 
 const Social = ({ iconSize = 'initial' }: Props) => {
