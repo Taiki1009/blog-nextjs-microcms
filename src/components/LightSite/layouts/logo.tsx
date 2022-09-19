@@ -4,7 +4,7 @@ import styles from 'styles/lightSite/logo.module.css'
 
 const Logo = ({ boxOn = false }) => {
   return (
-    <Link href="/lightSite/home">
+    <Link href="/light-site/home">
       <a className={boxOn ? styles.box : styles.basic}>CUBE</a>
     </Link>
   )

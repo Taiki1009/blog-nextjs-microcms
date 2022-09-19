@@ -10,7 +10,7 @@ import 'styles/globals.css'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   // 複数サイトを扱う予定なので正規表現でpathをチェックする
-  const lightSitePath = /lightSite/
+  const lightSitePath = /light-site/
 
   return lightSitePath.test(router.pathname) ? (
     <LightSiteLayout>

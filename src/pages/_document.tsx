@@ -5,6 +5,8 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document'
+import { siteMeta } from 'libs/constants'
+const { siteLang } = siteMeta
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -14,7 +16,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang={siteLang}>
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"

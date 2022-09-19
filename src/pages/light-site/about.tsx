@@ -2,18 +2,27 @@ import Image from 'next/image'
 import Contact from '@LightSiteComponents/contact'
 import Hero from '@LightSiteComponents/hero'
 import Container from '@LightSiteComponents/layouts/container'
+import Meta from '@LightSiteComponents/layouts/meta'
 import PostBody from '@LightSiteComponents/post-body'
 import TowColumn from '@LightSiteComponents/tow-column'
-import eyecatch from 'images/about.jpg'
+import eyeCatch from 'images/about.jpg'
 
 const About = () => {
   return (
     <Container>
+      <Meta
+        pageTitle="ABOUT"
+        pageDesc="About development activities"
+        pageImg={eyeCatch.src}
+        pageImgW={eyeCatch.width}
+        pageImgH={eyeCatch.height}
+      />
+
       <Hero title={'About'} subtitle={'About development activities'} />
 
       <figure>
         <Image
-          src={eyecatch}
+          src={eyeCatch}
           alt="image"
           layout="responsive"
           sizes="(min-width: 1152px) 1152px, 100vw"
