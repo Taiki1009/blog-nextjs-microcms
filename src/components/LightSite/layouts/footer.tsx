@@ -1,3 +1,4 @@
+import Social from './social'
 import Container from '@LightSiteComponents/layouts/container'
 import Logo from '@LightSiteComponents/layouts/logo'
 import styles from 'styles/lightSite/footer.module.css'
@@ -8,7 +9,7 @@ const Footer = () => {
       <Container>
         <div className={styles.flexContainer}>
           <Logo />
-          [ソーシャル]
+          <Social />
         </div>
       </Container>
     </footer>

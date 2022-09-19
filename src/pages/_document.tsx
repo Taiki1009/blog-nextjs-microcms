@@ -40,7 +40,7 @@ class MyDocument extends Document {
             referrerPolicy="no-referrer"
           />
         </Head>
-        <body className="bg-body text-white poppins">
+        <body>
           {/* [FIXME] Main, NextScriptについて調査する */}
           <Main />
           <NextScript />

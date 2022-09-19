@@ -9,7 +9,7 @@ interface LayoutProps {
 // [FIXME] 一度通してからTsの方定義を行う
 const HomeLayout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="bg-body text-white poppins">
       <Header />
       <div className="min-h-screen">
         <div className={`fixed top-0 left-0 w-full h-screen z-[-1]`}>
@@ -23,7 +23,7 @@ const HomeLayout = ({ children }: LayoutProps) => {
         <main>{children}</main>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

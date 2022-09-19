@@ -1,3 +1,8 @@
+// Font Awesomeの設定
+import '@fortawesome/fontawesome-svg-core/styles.css' // Font AwesomeのCSSをインポートして全体に適用
+import { config } from '@fortawesome/fontawesome-svg-core' // SVG-COREが個別にCSSを適用するのを無効化
+config.autoAddCss
+
 import { AppProps } from 'next/app'
 import HomeLayout from '@HomeComponents/layouts/layout'
 import LightSiteLayout from '@LightSiteComponents/layouts/layout'
