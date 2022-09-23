@@ -32,7 +32,7 @@ const About = () => {
       </figure>
 
       <TowColumn>
-        <TowColumn.TowColumnMain>
+        <TowColumn.Main>
           <PostBody>
             <p>
               Cubeが得意とする分野はものづくりです。3次元から2次元の造形、プログラミングやデザインなど、
@@ -53,11 +53,11 @@ const About = () => {
               小さなヒントから新しいものを生み出すような物作りは、これからも続けていきたいです。
             </p>
           </PostBody>
-        </TowColumn.TowColumnMain>
+        </TowColumn.Main>
 
-        <TowColumn.TowColumnSidebar>
+        <TowColumn.Sidebar>
           <Contact />
-        </TowColumn.TowColumnSidebar>
+        </TowColumn.Sidebar>
       </TowColumn>
     </Container>
   )

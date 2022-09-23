@@ -189,6 +189,7 @@ const BlackSite = () => {
             <div>
               <p className="text-secondary">000-1234-999</p>
               <a href="mailto:example@mail.com">example@mail.com</a>
+
               {/* sns */}
               <div className="mt-20 space-x-6">
                 <a href="#">

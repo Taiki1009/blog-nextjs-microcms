@@ -6,12 +6,12 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-// [FIXME] 一度通してからTsの方定義を行う
 const HomeLayout = ({ children }: LayoutProps) => {
   return (
     <div className="bg-body text-white poppins">
       <Header />
       <div className="min-h-screen">
+        {/* 好みで背景画像を変換 */}
         {/* <div className={`fixed top-0 left-0 w-full h-screen z-[-1]`}>
           <Image
             src={`/images/black.jpeg`}
