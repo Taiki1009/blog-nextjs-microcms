@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { siteMeta } from '@Libs/constants'
 import siteImg from 'images/ogp.jpg'
-import { siteMeta } from 'libs/constants'
 
 type Props = {
   pageTitle?: string

@@ -6,7 +6,7 @@ import {
   GetStaticPropsContext,
 } from 'next'
 import PropTypes from 'prop-types'
-import { client } from '../../../libs/client'
+import { client } from '@Libs/client'
 import styles from 'styles/Home.module.scss'
 import { Blog } from 'types/blog'
 
@@ -23,6 +23,7 @@ const BlogId: NextPage<BlogPageProps> = ({
     const date = new Date(publishedAt)
     return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
   }
+  // console.log(`${title}, ${content}, ${publishDate}`)
 
   return (
     <main className="mt-16 mb-20 mx-auto w-4/5">

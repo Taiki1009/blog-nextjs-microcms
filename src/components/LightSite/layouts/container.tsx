@@ -1,6 +1,11 @@
 import styles from 'styles/lightSite/container.module.css'
 
-const Container = ({ children, large = false }: any) => {
+interface Props {
+  children: React.ReactNode
+  large?: boolean
+}
+
+const Container = ({ children, large = false }: Props) => {
   return <div className={large ? styles.large : styles.default}>{children}</div>
 }
 

@@ -22,6 +22,7 @@
     "paths": {
       "@HomeComponents/*": ["components/Home/*"],
       "@LightSiteComponents/*": ["components/LightSite/*"],
+      "@Libs/*": ["../libs/*"],
     },
   },
   "include": [

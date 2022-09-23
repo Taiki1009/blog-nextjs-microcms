@@ -5,7 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document'
-import { siteMeta } from 'libs/constants'
+import { siteMeta } from '@Libs/constants'
 const { siteLang } = siteMeta
 
 class MyDocument extends Document {

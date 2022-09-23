@@ -1,6 +1,10 @@
 import styles from 'styles/lightSite/post-body.module.css'
 
-const PostBody = ({ children }: any) => {
+interface Props {
+  children: React.ReactNode
+}
+
+const PostBody = ({ children }: Props) => {
   return <div className={styles.stack}>{children}</div>
 }
 

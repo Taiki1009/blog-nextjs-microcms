@@ -1,6 +1,6 @@
 import Container from '@LightSiteComponents/layouts/container'
 import Logo from '@LightSiteComponents/layouts/logo'
-import Nav from '@LightSiteComponents/layouts/nav'
+import Nav from '@LightSiteComponents/nav'
 import styles from 'styles/lightSite/header.module.css'
 
 const Header = () => {

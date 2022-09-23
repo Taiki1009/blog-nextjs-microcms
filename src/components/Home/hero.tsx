@@ -26,7 +26,7 @@ const Hero = () => {
             <Image
               src={heroImg.src}
               alt="image"
-              layout='intrinsic'
+              layout="intrinsic"
               width={800}
               height={1000}
             />

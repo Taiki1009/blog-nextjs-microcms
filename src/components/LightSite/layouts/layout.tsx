@@ -8,11 +8,11 @@ interface LayoutProps {
 // [FIXME] ページコンポーネントの型定義
 const LightSiteLayout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="bg-white text-black poppins">
       <Header />
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }
 

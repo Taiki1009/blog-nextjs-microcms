@@ -8,20 +8,9 @@ interface BlogProps {
 }
 type BlogPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
-//SSG
-export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.get({ endpoint: 'blogs' })
-  console.log(data)
-
-  return {
-    props: {
-      blogList: data.contents,
-    },
-  }
-}
-
 const Blogs: NextPage<BlogPageProps> = (props: BlogPageProps) => {
   const { blogList } = props
+  // console.log(blogList)
 
   return (
     <div className="blogList">
@@ -35,6 +24,17 @@ const Blogs: NextPage<BlogPageProps> = (props: BlogPageProps) => {
       ))}
     </div>
   )
+}
+
+//SSG
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get({ endpoint: 'blogs' })
+
+  return {
+    props: {
+      blogList: data.contents,
+    },
+  }
 }
 
 export default Blogs
