@@ -1,5 +1,5 @@
-import Social from './layouts/social'
-import styles from 'styles/lightSite/contact.module.css'
+import styles from './contact.module.css'
+import Social from '@LightSiteComponents/social/index'
 
 const Contact = () => {
   return (

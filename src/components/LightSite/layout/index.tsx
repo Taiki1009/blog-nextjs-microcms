@@ -1,9 +1,6 @@
-import Footer from './footer'
-import Header from './header'
-
-interface LayoutProps {
-  children: React.ReactNode
-}
+import { LayoutProps } from './layoutTypes'
+import Footer from '@LightSiteComponents/footer/index'
+import Header from '@LightSiteComponents/header/index'
 
 const LightSiteLayout = ({ children }: LayoutProps) => {
   return (

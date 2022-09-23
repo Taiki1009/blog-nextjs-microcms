@@ -1,6 +1,6 @@
-import Hero from '@LightSiteComponents/hero'
-import Container from '@LightSiteComponents/layouts/container'
-import Meta from '@LightSiteComponents/layouts/meta'
+import Container from '@LightSiteComponents/container/index'
+import Hero from '@LightSiteComponents/hero/index'
+import Meta from '@LightSiteComponents/meta/index'
 
 const Blog = () => {
   return (

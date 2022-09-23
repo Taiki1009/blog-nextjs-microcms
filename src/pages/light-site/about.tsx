@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import Contact from '@LightSiteComponents/contact'
-import Hero from '@LightSiteComponents/hero'
-import Container from '@LightSiteComponents/layouts/container'
-import Meta from '@LightSiteComponents/layouts/meta'
-import PostBody from '@LightSiteComponents/post-body'
-import TowColumn from '@LightSiteComponents/tow-column'
-import eyeCatch from 'images/about.jpg'
+import Contact from '@LightSiteComponents/contact/index'
+import Container from '@LightSiteComponents/container/index'
+import Hero from '@LightSiteComponents/hero/index'
+import Meta from '@LightSiteComponents/meta/index'
+import PostBody from '@LightSiteComponents/post-body/index'
+import TowColumn from '@LightSiteComponents/tow-column/index'
+import AboutImg from 'images/about.jpg'
 
 const About = () => {
   return (
@@ -13,16 +13,16 @@ const About = () => {
       <Meta
         pageTitle="ABOUT"
         pageDesc="About development activities"
-        pageImg={eyeCatch.src}
-        pageImgW={eyeCatch.width}
-        pageImgH={eyeCatch.height}
+        pageImg={AboutImg.src}
+        pageImgW={AboutImg.width}
+        pageImgH={AboutImg.height}
       />
 
       <Hero title={'About'} subtitle={'About development activities'} />
 
       <figure>
         <Image
-          src={eyeCatch}
+          src={AboutImg}
           alt="image"
           layout="responsive"
           sizes="(min-width: 1152px) 1152px, 100vw"

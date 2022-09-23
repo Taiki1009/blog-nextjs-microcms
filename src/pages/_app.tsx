@@ -5,7 +5,7 @@ config.autoAddCss
 
 import { AppProps } from 'next/app'
 import HomeLayout from '@HomeComponents/layouts/layout'
-import LightSiteLayout from '@LightSiteComponents/layouts/layout'
+import LightSiteLayout from '@LightSiteComponents/layout/index'
 import 'styles/globals.css'
 
 function MyApp({ Component, pageProps, router }: AppProps) {

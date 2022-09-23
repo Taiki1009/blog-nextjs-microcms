@@ -1,14 +1,9 @@
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from 'styles/lightSite/post-header.module.css'
+import styles from './post-header.module.css'
+import { PostHeaderProps } from './postHeaderTypes'
 
-type Props = {
-  title: string
-  subtitle: string
-  publish: string
-}
-
-const PostHeader = ({ title, subtitle, publish = '' }: Props) => {
+const PostHeader = ({ title, subtitle, publish = '' }: PostHeaderProps) => {
   const publishDate = () => {
     const date = new Date(publish)
     return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from 'styles/lightSite/nav.module.css'
+import styles from './nav.module.css'
 
 const Nav = () => {
   return (

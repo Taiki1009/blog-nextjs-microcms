@@ -1,7 +1,7 @@
-import Social from './social'
-import Container from '@LightSiteComponents/layouts/container'
-import Logo from '@LightSiteComponents/layouts/logo'
-import styles from 'styles/lightSite/footer.module.css'
+import styles from './footer.module.css'
+import Container from '@LightSiteComponents/container/index'
+import Logo from '@LightSiteComponents/logo/index'
+import Social from '@LightSiteComponents/social/index'
 
 const Footer = () => {
   return (

@@ -4,13 +4,10 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from 'styles/lightSite/social.module.css'
+import styles from './social.module.css'
+import { SocialProps } from './socialTypes'
 
-type Props = {
-  iconSize?: string
-}
-
-const Social = ({ iconSize = 'initial' }: Props) => {
+const Social = ({ iconSize = 'initial' }: SocialProps) => {
   const style = { '--icon-size': iconSize } as React.CSSProperties
 
   return (

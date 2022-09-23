@@ -1,14 +1,9 @@
 import Image from 'next/image'
+import styles from './hero.module.css'
+import { HeroProps } from './heroTypes'
 import cube from 'images/cube.jpg'
-import styles from 'styles/lightSite/hero.module.css'
 
-type Props = {
-  title: string
-  subtitle: string
-  imageOn?: boolean
-}
-
-const Hero = ({ title, subtitle, imageOn = false }: Props) => {
+const Hero = ({ title, subtitle, imageOn = false }: HeroProps) => {
   return (
     <div className={styles.flexContainer}>
       <div className={styles.text}>

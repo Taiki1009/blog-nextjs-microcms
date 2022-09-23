@@ -1,36 +1,16 @@
 import Image from 'next/image'
 import { getPostBySlug } from '@Libs/client'
 import extractText from '@Libs/extract-text'
-import Container from '@LightSiteComponents/layouts/container'
-import Meta from '@LightSiteComponents/layouts/meta'
-import PostBody from '@LightSiteComponents/post-body'
-import PostCategories from '@LightSiteComponents/post-categories'
-import PostHeader from '@LightSiteComponents/post-header'
-import TwoColumn from '@LightSiteComponents/tow-column'
+import Container from '@LightSiteComponents/container/index'
+import Meta from '@LightSiteComponents/meta/index'
+import PostBody from '@LightSiteComponents/post-body/index'
+import PostCategories from '@LightSiteComponents/post-categories/index'
+import PostHeader from '@LightSiteComponents/post-header/index'
+import TwoColumn from '@LightSiteComponents/tow-column/index'
+import { BlogTypes } from 'types/blog'
 
-type Props = {
-  title: string
-  publishedAt: string
-  content: string
-  eyeCatch?: EyeCatchProps
-  categories: CategoriesProps[]
-  description: string
-}
-
-type EyeCatchProps = {
-  url: string
-  width: number
-  height: number
-}
-
-type CategoriesProps = {
-  id: string
-  name: string
-  slug: string
-}
-
-const Life = (props: Props) => {
-  const { title, publishedAt, content, eyeCatch, categories, description } =
+const Life = (props: BlogTypes) => {
+  const { title, publishDate, content, eyeCatch, categories, description } =
     props
 
   return (
@@ -46,7 +26,7 @@ const Life = (props: Props) => {
         <PostHeader
           title={title}
           subtitle={'Blog Article'}
-          publish={publishedAt}
+          publish={publishDate}
         />
 
         <figure>
@@ -82,7 +62,7 @@ export async function getStaticProps() {
   const slug = 'life'
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
-  console.log(post.categories)
+  // console.log(post.categories)
 
   return {
     props: {

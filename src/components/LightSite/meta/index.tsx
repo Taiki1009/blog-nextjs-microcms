@@ -1,20 +1,19 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { MetaProps } from './metaTypes'
 import { siteMeta } from '@Libs/constants'
 import siteImg from 'images/ogp.jpg'
-
-type Props = {
-  pageTitle?: string
-  pageDesc?: string
-  pageImg?: string
-  pageImgW?: number
-  pageImgH?: number
-}
 
 const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon } =
   siteMeta
 
-const Meta = ({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH }: Props) => {
+const Meta = ({
+  pageTitle,
+  pageDesc,
+  pageImg,
+  pageImgW,
+  pageImgH,
+}: MetaProps) => {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
   const desc = pageDesc ?? siteDesc
   const router = useRouter()

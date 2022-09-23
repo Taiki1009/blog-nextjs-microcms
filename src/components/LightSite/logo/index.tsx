@@ -1,17 +1,13 @@
 import Link from 'next/link'
-import PropTypes from 'prop-types'
-import styles from 'styles/lightSite/logo.module.css'
+import styles from './logo.module.css'
+import { LogoProps } from './logoTypes'
 
-const Logo = ({ boxOn = false }) => {
+const Logo = ({ boxOn = false }: LogoProps) => {
   return (
     <Link href="/light-site/home">
       <a className={boxOn ? styles.box : styles.basic}>CUBE</a>
     </Link>
   )
-}
-
-Logo.propTypes = {
-  boxOn: PropTypes.bool,
 }
 
 export default Logo

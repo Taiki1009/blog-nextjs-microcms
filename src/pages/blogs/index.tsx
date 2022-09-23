@@ -1,21 +1,19 @@
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
-import { client } from '../../../libs/client'
+import { client } from '@Libs/client'
+import { BlogTypes } from 'types/blog'
 
-interface BlogProps {
-  id: string
-  title: string
-}
-type BlogPageProps = InferGetStaticPropsType<typeof getStaticProps>
-
-const Blogs: NextPage<BlogPageProps> = (props: BlogPageProps) => {
-  const { blogList } = props
+const Blogs = ({
+  blogList,
+}: {
+  blogList: Pick<BlogTypes, 'id' | 'title'>[]
+}) => {
   // console.log(blogList)
 
   return (
     <div className="blogList">
       <h3>投稿一覧</h3>
-      {blogList.map((blog: BlogProps) => (
+      {blogList.map((blog) => (
         <li key={blog.id}>
           <Link href={`blogs/${blog.id}`}>
             <a href="">{blog.title}</a>

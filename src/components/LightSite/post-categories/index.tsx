@@ -1,13 +1,8 @@
 import { faFolderOpen } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
-import styles from 'styles/lightSite/post-categories.module.css'
-
-type CategoryProps = {
-  id: string
-  name: string
-  slug: string
-}
+import styles from './post-categories.module.css'
+import { CategoryProps } from './postCategoryTypes'
 
 const PostCategories = ({ categories }: { categories: CategoryProps[] }) => {
   return (

@@ -1,19 +1,16 @@
-import styles from 'styles/lightSite/tow-column.module.css'
-
-interface Props {
-  children?: React.ReactNode
-}
+import styles from './tow-column.module.css'
+import { TowColumnProps } from './towColumnTypes'
 
 // MainとSidebarをメソッドとして使用するため、アロー関数ではなく、functionとして定義。
-function TowColumn({ children }: Props) {
+function TowColumn({ children }: TowColumnProps) {
   return <div className={styles.flexContainer}>{children}</div>
 }
 
-TowColumn.Main = function Main({ children }: Props) {
+TowColumn.Main = function Main({ children }: TowColumnProps) {
   return <div className={styles.main}>{children}</div>
 }
 
-TowColumn.Sidebar = function Sidebar({ children }: Props) {
+TowColumn.Sidebar = function Sidebar({ children }: TowColumnProps) {
   return <div className={styles.sidebar}>{children}</div>
 }
 
