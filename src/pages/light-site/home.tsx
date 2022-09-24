@@ -15,7 +15,7 @@ const LightSiteHome = ({ posts }: { posts: BlogTypes[] }) => {
       <Hero title={'CUBE'} subtitle={'アウトプットしていくサイト'} imageOn />
 
       <Posts posts={posts} />
-      <Pagination nextUrl="/blog" nextText="More Posts" />
+      <Pagination nextUrl="/light-site/blog" nextText="More Posts" />
     </Container>
   )
 }

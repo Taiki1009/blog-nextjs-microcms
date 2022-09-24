@@ -8,7 +8,10 @@ const Posts = ({ posts }: { posts: BlogTypes[] }) => {
     <div className={styles.gridContainer}>
       {posts.map(({ title, slug, eyeCatch }: BlogTypes) => (
         <article className={styles.post} key={slug}>
-          <Link href={`/light-site/blog/${slug}`}>
+          <Link
+            href={`/light-site/blog/${slug}`}
+            as={`/light-site/blog/${slug}`}
+          >
             <a>
               <figure>
                 <Image

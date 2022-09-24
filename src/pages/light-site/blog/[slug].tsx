@@ -76,9 +76,9 @@ const Post = (props: PostProps) => {
         </TwoColumn>
         <Pagination
           prevText={prevPost.title}
-          prevUrl={`light-site/blog/${prevPost.slug}`}
+          prevUrl={`${prevPost.slug}`}
           nextText={nextPost.title}
-          nextUrl={`light-site/blog/${nextPost.slug}`}
+          nextUrl={`${nextPost.slug}`}
         />
       </article>
     </Container>

@@ -14,7 +14,10 @@ const PostCategories = ({ categories }: { categories: CategoryProps[] }) => {
       <ul className={styles.list}>
         {categories.map(({ name, slug }) => (
           <li key={slug}>
-            <Link href={`/light-site/blog/category/${slug}`}>
+            <Link
+              href={`/light-site/blog/category/${slug}`}
+              as={`/light-site/blog/category/${slug}`}
+            >
               <a>{name}</a>
             </Link>
           </li>

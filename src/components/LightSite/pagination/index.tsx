@@ -23,7 +23,7 @@ const Pagination = ({
     <ul className={styles.flexContainer}>
       {prevText && prevUrl && (
         <li className={styles.prev}>
-          <Link href={prevUrl}>
+          <Link href={prevUrl} as={prevUrl}>
             <a className={styles.iconText}>
               <FontAwesomeIcon icon={faChevronLeft} color="var(--gray-25)" />
               <span>{prevText}</span>
@@ -33,7 +33,7 @@ const Pagination = ({
       )}
       {nextText && nextUrl && (
         <li className={styles.prev}>
-          <Link href={nextUrl}>
+          <Link href={nextUrl} as={nextUrl}>
             <a className={styles.iconText}>
               <FontAwesomeIcon icon={faChevronRight} color="var(--gray-25)" />
               <span>{nextText}</span>
