@@ -18,7 +18,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "@HomeComponents/*": ["components/Home/*"],
+      "@LightSiteComponents/*": ["components/LightSite/*"],
+      "@Libs/*": ["../libs/*"],
+    },
   },
   "include": [
     "next-env.d.ts",

@@ -1,18 +1,13 @@
-import Hero from "components/hero"
-import Portfolio from "components/portfolio"
-import Skills from "components/skills"
-import Contact from "components/contact"
+import Hero from '@HomeComponents/hero'
+import BlackSite from '@HomeComponents/index'
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Portfolio />
-      <Skills />
-      <Contact />
+      <BlackSite />
     </>
   )
-
 }
 
 export default Home

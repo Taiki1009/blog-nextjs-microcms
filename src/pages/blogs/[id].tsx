@@ -1,23 +1,25 @@
-import { client } from "../../../libs/client";
-import { GetStaticProps, GetStaticPaths, NextPage } from "next";
-import { Blog } from "types/blog";
-import styles from "../../../styles/Home.module.scss";
+import { GetStaticProps, GetStaticPaths, GetStaticPropsContext } from 'next'
+import { client } from '@Libs/client'
+import styles from 'styles/Home.module.scss'
+import { BlogTypes } from 'types/blog'
 
-type BlogProps = {
-  blog: Blog
+export type ApiContext = {
+  apiRootUrl: string
 }
 
-const BlogId: NextPage<BlogProps> = (props) => {
-  const { title, content, publishedAt } = props.blog
-  const publishDate = () => {
-    let date = new Date(publishedAt)
-    return (`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`)
+const BlogId = (
+  props: Pick<BlogTypes, 'title' | 'content' | 'publishDate'>,
+) => {
+  const { title, content, publishDate } = props
+  const publishedAt = () => {
+    const date = new Date(publishDate)
+    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
   }
 
   return (
     <main className="mt-16 mb-20 mx-auto w-4/5">
       <h1 className="mb-10 text-4xl font-bold">{title}</h1>
-      <p className="mb-10 text-right">投稿日: {publishDate()}</p>
+      <p className="mb-10 text-right">投稿日: {publishedAt()}</p>
       <div
         dangerouslySetInnerHTML={{ __html: `${content}` }}
         className={styles.post}
@@ -27,22 +29,31 @@ const BlogId: NextPage<BlogProps> = (props) => {
 }
 
 //SSG
-// [FIXME contextの型定義
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const id = context.params.id
-  const data = await client.get({ endpoint: "blogs", contentId: id })
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: GetStaticPropsContext) => {
+  if (!params) {
+    throw new Error('params is undefined')
+  }
+
+  const id = String(params.id)
+  const post = await client.get({ endpoint: 'blogs', contentId: id })
 
   return {
     props: {
-      blog: data,
+      title: post.title,
+      content: post.content,
+      publishDate: post.publishDate,
     },
   }
 }
 
 // DynamicRouter
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blogs" })
-  const paths = data.contents.map((content: Blog) => `/blogs/${content.id}`)
+  const data = await client.get({ endpoint: 'blogs' })
+  const paths = data.contents.map(
+    (content: BlogTypes) => `/blogs/${content.id}`,
+  )
 
   return {
     paths,

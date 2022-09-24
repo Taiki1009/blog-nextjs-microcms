@@ -1,32 +1,19 @@
-import Link from "next/link";
-import { client } from "../../../libs/client"
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps } from 'next'
+import Link from 'next/link'
+import { client } from '@Libs/client'
+import { BlogTypes } from 'types/blog'
 
-interface BlogProps {
-  id: string
-  title: string
-}
-type BlogListProps = BlogProps[]
-
-//SSG
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const data = await client.get({ endpoint: "blogs" })
-  console.log(data)
-
-  return {
-    props: {
-      blogList: data.contents,
-    },
-  }
-}
-
-const Blogs: NextPage<BlogListProps> = (props: any) => {
-  const { blogList } = props
+const Blogs = ({
+  blogList,
+}: {
+  blogList: Pick<BlogTypes, 'id' | 'title'>[]
+}) => {
+  // console.log(blogList)
 
   return (
     <div className="blogList">
       <h3>投稿一覧</h3>
-      {blogList.map((blog: BlogProps) => (
+      {blogList.map((blog) => (
         <li key={blog.id}>
           <Link href={`blogs/${blog.id}`}>
             <a href="">{blog.title}</a>
@@ -35,6 +22,17 @@ const Blogs: NextPage<BlogListProps> = (props: any) => {
       ))}
     </div>
   )
+}
+
+//SSG
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await client.get({ endpoint: 'blogs' })
+
+  return {
+    props: {
+      blogList: data.contents,
+    },
+  }
 }
 
 export default Blogs
