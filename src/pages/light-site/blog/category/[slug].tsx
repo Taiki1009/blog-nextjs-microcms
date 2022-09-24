@@ -25,7 +25,6 @@ const Category = ({ name, posts }: CategoryProps) => {
 
 export async function getStaticPaths() {
   const allCategories = await getAllCategories()
-
   return {
     paths: allCategories.map(
       ({ slug }: { slug: string }) => `/light-site/blog/category/${slug}`,

@@ -51,7 +51,7 @@ export async function getAllPosts(limit = 100) {
 export async function getAllCategories(limit = 100) {
   try {
     const categories = await client.get({
-      endpoint: 'blogs',
+      endpoint: 'categories',
       queries: {
         fields: 'id,name,slug',
         limit: limit,
