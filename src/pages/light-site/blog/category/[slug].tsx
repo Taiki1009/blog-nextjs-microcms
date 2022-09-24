@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
   return {
     paths: allCategories.map(
-      ({ slug }: { slug: string }) => `/blog/category/${slug}`,
+      ({ slug }: { slug: string }) => `/light-site/blog/category/${slug}`,
     ),
     fallback: false,
   }
