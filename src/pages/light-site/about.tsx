@@ -12,7 +12,7 @@ const About = () => {
     <Container>
       <Meta
         pageTitle="ABOUT"
-        pageDesc="About development activities"
+        pageDescription="About development activities"
         pageImg={AboutImg.src}
         pageImgW={AboutImg.width}
         pageImgH={AboutImg.height}

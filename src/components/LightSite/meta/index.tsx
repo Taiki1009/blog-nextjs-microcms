@@ -9,13 +9,13 @@ const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon } =
 
 const Meta = ({
   pageTitle,
-  pageDesc,
+  pageDescription,
   pageImg,
   pageImgW,
   pageImgH,
 }: MetaProps) => {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
-  const desc = pageDesc ?? siteDesc
+  const desc = pageDescription ?? siteDesc
   const router = useRouter()
   const url = `${siteUrl}${router.asPath}`
   const img = pageImg || siteImg.src

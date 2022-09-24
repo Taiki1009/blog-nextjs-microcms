@@ -1,6 +1,6 @@
 export type MetaProps = {
   pageTitle?: string
-  pageDesc?: string
+  pageDescription?: string
   pageImg?: string
   pageImgW?: number
   pageImgH?: number
