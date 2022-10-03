@@ -1,3 +1,5 @@
+import { faRegistered } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import Image1 from 'images/portfolio1.jpg'
 import Image2 from 'images/portfolio2.jpg'
@@ -109,10 +111,13 @@ const BlackSite = () => {
           </div>
 
           <div className="my-16">
-            <div className="w-full border border-purple-300 p-16 lg:px-32 lg;py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-blue-300 transition-all duration-300 cursor-pointer">
+            <div className="w-full border border-purple-300 p-16 lg;py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-red-600 transition-all duration-300 cursor-pointer">
               {/* 言語のロゴ */}
               <div className="mb-6 lg:mb-0 self-center">
-                <i className="fa-brands text-9xl text-blue-300"></i>
+                <FontAwesomeIcon
+                  icon={faRegistered}
+                  className="text-9xl text-red-600"
+                />
               </div>
 
               {/* スキルの説明 */}
