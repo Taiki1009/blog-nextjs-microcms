@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async ({
 export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.get({ endpoint: 'blogs' })
   const paths = data.contents.map(
-    (content: BlogTypes) => `/blogs/${content.id}`,
+    (content: BlogTypes) => `/dark-site/blogs/${content.id}`,
   )
 
   return {

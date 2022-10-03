@@ -15,7 +15,7 @@ const Blogs = ({
       <h3>投稿一覧</h3>
       {blogList.map((blog) => (
         <li key={blog.id}>
-          <Link href={`blogs/${blog.id}`}>
+          <Link href={`blogs/${blog.id}`} as={`blogs/${blog.id}`}>
             <a href="">{blog.title}</a>
           </Link>
         </li>
