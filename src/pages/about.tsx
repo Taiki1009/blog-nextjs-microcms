@@ -19,7 +19,10 @@ const About = () => {
         pageImgH={AboutImg.height}
       />
 
-      <Hero title={'About'} subtitle={'About development activities'} />
+      <Hero
+        title={'About'}
+        subtitle={'About development activities(テストページです)'}
+      />
 
       <figure>
         <Image

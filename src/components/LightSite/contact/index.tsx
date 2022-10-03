@@ -6,7 +6,7 @@ const Contact = () => {
     <div className={styles.stack}>
       <h3 className={styles.heading}>Contact</h3>
       <Social iconSize="40px" />
-      <address>cube@web.mail.address</address>
+      <address>test@mail.com</address>
     </div>
   )
 }

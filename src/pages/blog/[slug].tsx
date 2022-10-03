@@ -90,9 +90,7 @@ export async function getStaticPaths() {
   // console.log(allSlugs)
 
   return {
-    paths: allSlugs.map(
-      ({ slug }: { slug: string }) => `/light-site/blog/${slug}`,
-    ),
+    paths: allSlugs.map(({ slug }: { slug: string }) => `/blog/${slug}`),
     // fallbackを'blocking'やtrueにした場合は、取得したページ以外はSSRと同様の処理になる
     fallback: false,
   }

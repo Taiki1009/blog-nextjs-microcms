@@ -47,7 +47,7 @@ const Header = () => {
               お問合せ
             </a>
           </Link>
-          <Link href="light-site" as="/light-site/home">
+          <Link href="/" as="/">
             <a
               href=""
               className="hover:text-selected-text transition-all duration-300"
