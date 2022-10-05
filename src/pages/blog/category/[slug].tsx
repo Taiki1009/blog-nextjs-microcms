@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   const allCategories = await getAllCategories()
   return {
     paths: allCategories.map(
-      ({ slug }: { slug: string }) => `/light-site/blog/category/${slug}`,
+      ({ slug }: { slug: string }) => `/blog/category/${slug}`,
     ),
     fallback: false,
   }

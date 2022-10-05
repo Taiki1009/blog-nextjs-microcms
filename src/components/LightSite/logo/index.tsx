@@ -4,8 +4,8 @@ import { LogoProps } from './logoTypes'
 
 const Logo = ({ boxOn = false }: LogoProps) => {
   return (
-    <Link href="/light-site/home" as="/light-site/home">
-      <a className={boxOn ? styles.box : styles.basic}>CUBE</a>
+    <Link href="/" as="/">
+      <a className={boxOn ? styles.box : styles.basic}>Tai&apos;s Blog</a>
     </Link>
   )
 }

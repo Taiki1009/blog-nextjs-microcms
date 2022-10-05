@@ -5,7 +5,7 @@ const Header = () => {
     <header className="w-full py-6 bg-zinc-700 sticky top-0 z-50 opacity-80">
       <div className="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full">
         <div className="text-3xl font-bold">
-          <Link href="/">
+          <Link href="/dark-site">
             <a
               href=""
               className="hover:text-selected-text transition-all duration-300"
@@ -15,7 +15,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="space-x-12 hidden md:flex items-center">
-          <Link href="blogs" as="/blogs">
+          <Link href="blogs" as="/dark-site/blogs">
             <a
               href=""
               className="hover:text-selected-text transition-all duration-300"
@@ -47,7 +47,7 @@ const Header = () => {
               お問合せ
             </a>
           </Link>
-          <Link href="light-site" as="/light-site/home">
+          <Link href="/" as="/">
             <a
               href=""
               className="hover:text-selected-text transition-all duration-300"

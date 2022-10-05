@@ -1,7 +1,7 @@
 export const siteMeta = {
-  siteTitle: 'CUBE',
+  siteTitle: "Tai's Blog",
   siteDesc: 'アウトプットしていくサイト',
-  siteUrl: 'https://blog-nextjs-microcms.vercel.app/light-site',
+  siteUrl: 'https://blog-nextjs-microcms.vercel.app',
   siteLang: 'ja',
   siteLocale: 'ja_JP',
   siteType: 'website',

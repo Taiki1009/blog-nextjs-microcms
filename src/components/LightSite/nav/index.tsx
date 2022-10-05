@@ -32,22 +32,22 @@ const Nav = () => {
 
       <ul className={styles.list}>
         <li>
-          <Link href="/light-site/home" as="/light-site/home">
+          <Link href="/" as="/">
             <a onClick={closeNav}>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/light-site/about" as="/light-site/about">
+          <Link href="/about" as="/about">
             <a onClick={closeNav}>About</a>
           </Link>
         </li>
         <li>
-          <Link href="/light-site/blog" as="/light-site/blog">
+          <Link href="/blog" as="/blog">
             <a onClick={closeNav}>Blog</a>
           </Link>
         </li>
         <li>
-          <Link href="/" as="/">
+          <Link href="/dark-site" as="/dark-site">
             <a onClick={closeNav}>darkSite</a>
           </Link>
         </li>
