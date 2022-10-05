@@ -8,7 +8,7 @@ import Image4 from 'images/portfolio4.jpg'
 import Image5 from 'images/portfolio5.jpg'
 import Image6 from 'images/portfolio6.jpg'
 
-const BlackSite = () => {
+const DarkSite = () => {
   return (
     <>
       {/* Portfolio */}
@@ -86,7 +86,7 @@ const BlackSite = () => {
           </p>
 
           <div className="my-16">
-            <div className="w-full border border-purple-300 p-16 lg:px-32 lg;py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-blue-400 transition-all duration-300 cursor-pointer">
+            <div className="w-full border border-purple-300 p-16 lg:py-20 flex justify-center lg:justify-start lg:space-x-32 hover:border-blue-400 transition-all duration-300 cursor-pointer">
               {/* 言語のロゴ */}
               <div className="mb-6 lg:mb-0 self-center">
                 <i className="fa-brands fa-react text-9xl text-blue-400"></i>
@@ -111,7 +111,7 @@ const BlackSite = () => {
           </div>
 
           <div className="my-16">
-            <div className="w-full border border-purple-300 p-16 lg;py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-red-600 transition-all duration-300 cursor-pointer">
+            <div className="w-full border border-purple-300 p-16 lg:py-20 flex justify-center lg:justify-start lg:space-x-32 hover:border-red-600 transition-all duration-300 cursor-pointer">
               {/* 言語のロゴ */}
               <div className="mb-6 lg:mb-0 self-center">
                 <FontAwesomeIcon
@@ -145,6 +145,8 @@ const BlackSite = () => {
           <h2 className="secondary-title">お問合せ</h2>
           <p className="section-paragraph">
             私の経歴が気になる方はご一報ください。即時対応します。
+            <br />
+            テスト用のフォームなので使用できません。
           </p>
 
           <div className="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
@@ -204,4 +206,4 @@ const BlackSite = () => {
   )
 }
 
-export default BlackSite
+export default DarkSite

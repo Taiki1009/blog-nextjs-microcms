@@ -1,11 +1,11 @@
 import Hero from '@HomeComponents/hero'
-import BlackSite from '@HomeComponents/index'
+import DarkSite from '@HomeComponents/index'
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <BlackSite />
+      <DarkSite />
     </>
   )
 }
