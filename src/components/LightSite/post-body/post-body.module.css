@@ -19,6 +19,7 @@
 .stack p {
   line-height: 1.8;
   letter-spacing: 0.2px;
+  margin-top: 1.8px;
 }
 
 .stack ul {

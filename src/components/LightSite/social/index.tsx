@@ -1,25 +1,31 @@
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 import styles from './social.module.css'
 import { SocialProps } from './socialTypes'
 
-const Social = ({ iconSize = 'initial' }: SocialProps) => {
-  const style = { '--icon-size': iconSize } as React.CSSProperties
+// @iconSize SNSアイコンサイズ: ['sm', 'md', 'lg', '2x', '3x', ...] # 参考サイト: https://fontawesome.com/v5/docs/web/style/size
+const Social = ({ iconSize = 'md' }: SocialProps) => {
+  iconSize = 'fa-' + iconSize
 
   return (
     <>
-      <ul className={styles.list} style={style}>
+      <ul className={styles.list}>
         <li>
-          <a href="https://twitter.com/STai0116">
-            <FontAwesomeIcon icon={faTwitter} />
-            <span className="sr-only">Twitter</span>
-          </a>
+          <Link href="https://twitter.com/STai0116" passHref>
+            <a href="" target="_blank" rel="noreferrer noopener">
+              <FontAwesomeIcon icon={faTwitter} className={iconSize} />
+              <span className="sr-only">Twitter</span>
+            </a>
+          </Link>
         </li>
         <li>
-          <a href="https://github.com/Taiki1009">
-            <FontAwesomeIcon icon={faGithub} />
-            <span className="sr-only">GitHub</span>
-          </a>
+          <Link href="https://github.com/Taiki1009" passHref>
+            <a href="" target="_blank" rel="noreferrer noopener">
+              <FontAwesomeIcon icon={faGithub} className={iconSize} />
+              <span className="sr-only">GitHub</span>
+            </a>
+          </Link>
         </li>
       </ul>
     </>

@@ -6,8 +6,8 @@
 .box {
   composes: basic;
   display: inline-block;
-  padding: 1em 2em;
+  padding: 0.6em 1.2em;
   background-color: var(--gray-75);
   color: var(--white);
-  font-size: var(--small-heading);
+  font-size: var(--small-heading2);
 }

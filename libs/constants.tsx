@@ -1,3 +1,5 @@
+import FaviconImage from 'images/favicon.png'
+
 export const siteMeta = {
   siteTitle: "Tai's Blog",
   siteDesc: 'アウトプットしていくサイト',
@@ -5,7 +7,7 @@ export const siteMeta = {
   siteLang: 'ja',
   siteLocale: 'ja_JP',
   siteType: 'website',
-  siteIcon: '/favicon.png',
+  siteIcon: FaviconImage.src,
 }
 
 export const defaultEyeCatch = {

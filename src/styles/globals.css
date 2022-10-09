@@ -78,6 +78,11 @@ a {
   text-decoration: none;
 }
 
+figure {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .secondary-title {
   @apply text-3xl font-bold;
 }
