@@ -6,11 +6,11 @@
 
 @media (min-width: 760px) {
   .main {
-    width: 850px;
+    width: 90%;
   }
 
   .sidebar {
-    width: 240px;
+    width: 20%;
     position: sticky;
     top: 40px;
     align-self: flex-start;
@@ -24,5 +24,6 @@
     margin-left: auto;
     place-items: flex-end;
     place-content: flex-end;
+    font-size: x-large;
   }
 }

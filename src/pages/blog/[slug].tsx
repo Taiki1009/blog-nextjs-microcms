@@ -56,7 +56,7 @@ const Post = (props: PostProps) => {
               layout="responsive"
               width={eyeCatch.width}
               height={eyeCatch.height}
-              sizes="(min-width: 1152px) 1152px, 100vw"
+              sizes="(min-width: 1152px) 50vw"
               priority
               placeholder="blur"
               blurDataURL={eyeCatch.blurDataURL}

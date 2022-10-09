@@ -11,7 +11,7 @@ import { BlogTypes } from 'types/blog'
 const Home = ({ posts }: { posts: BlogTypes[] }) => {
   return (
     <Container>
-      <Meta />
+      <Meta pageTitle="Home" />
       <Hero title={'Home'} subtitle={'アウトプットしていくサイト'} imageOn />
 
       <Posts posts={posts} />
@@ -21,7 +21,7 @@ const Home = ({ posts }: { posts: BlogTypes[] }) => {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllPosts(4) // トップページは4件のみ表示する
+  const posts = await getAllPosts(3) // トップページは3件のみ表示する
 
   for (const post of posts) {
     if (!Object.prototype.hasOwnProperty.call(post, 'eyeCatch')) {

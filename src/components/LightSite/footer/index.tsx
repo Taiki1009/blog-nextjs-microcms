@@ -5,7 +5,7 @@ import Social from '@LightSiteComponents/social/index'
 const Footer = () => {
   return (
     <footer className={styles.wrapper}>
-      <Container>
+      <Container large>
         <div className={styles.flexContainer}>
           <p>@2022 Tai</p>
           <Social />
