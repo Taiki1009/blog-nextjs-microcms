@@ -1,10 +1,26 @@
 import { createClient } from 'microcms-js-sdk'
 
+// Schema情報
+// Blogsテーブル
+//   title:       string
+//   content:     string
+//   slug:        string
+//   publishDate: string
+//   eyeCatch?:   EyeCatchTypes
+//   description: string
+//   categories:  reference
+
+// Categoriesテーブル
+//   name:        string
+//   slug:        string
+
+// microCMSの基本設定（ドメイン、APIKey）
 export const client = createClient({
   serviceDomain: process.env.SERVICE_DOMAIN || '',
   apiKey: process.env.API_KEY || '',
 })
 
+// ブログのSlug検索
 export async function getPostBySlug(slug: string) {
   try {
     const post = await client.get({
@@ -18,6 +34,7 @@ export async function getPostBySlug(slug: string) {
   }
 }
 
+// Slug全件取得
 export async function getAllSlugs(limit = 100) {
   try {
     const slugs = await client.get({
@@ -31,6 +48,7 @@ export async function getAllSlugs(limit = 100) {
   }
 }
 
+// ブログ全件取得
 export async function getAllPosts(limit = 100) {
   try {
     const posts = await client.get({
@@ -48,6 +66,7 @@ export async function getAllPosts(limit = 100) {
   }
 }
 
+// カテゴリー全件取得
 export async function getAllCategories(limit = 100) {
   try {
     const categories = await client.get({
@@ -64,6 +83,7 @@ export async function getAllCategories(limit = 100) {
   }
 }
 
+// カテゴリー検索
 export async function getAllPostsByCategory(categoryID: string, limit = 100) {
   try {
     const posts = await client.get({

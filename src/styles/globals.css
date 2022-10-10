@@ -106,3 +106,13 @@ figure {
 .blogList h3 {
   @apply text-2xl font-bold mt-10 mb-4 mx-0 border-b-2 border-solid border-neutral-400;
 }
+
+pre {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 5px;
+  background: #25292f;
+  color: #fff;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
