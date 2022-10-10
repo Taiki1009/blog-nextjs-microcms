@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={styles.wrapper}>
       <Container large>
         <div className={styles.flexContainer}>
-          <p>@2022 Tai</p>
+          <p>Copyright © 2022 Tai</p>
           <Social />
         </div>
       </Container>
