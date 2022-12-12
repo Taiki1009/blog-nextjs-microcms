@@ -1,25 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-### Next.jsとmicroCMSで作るブログサイト
+### Next.jsとmicroCMSで作るブログサイト 学習
 - 概要
-  - ブログ一覧ページとブログ詳細ページ
-  - vercelにアップロードし、webhookでmicroCMSと連携
-```bash
-npm i microcms-js-sdk
-npm i sass
-```
-microCMSにログインしてAPI＿KEYとエンドポイントを取得し、libs/client.jsに設定する
-```js
-cerateClient({
-  serviceDomain: "{endpoint}",
-  apiKey: process.env.API_KEY, // セキュリティ上、`.env.local`に設定する
-})
-```
+  - ブログ一覧ページ
+    - 直近3件の投稿を表示
+  - ブログ詳細ページ
+    - 画像＋投稿内容＋サイドバー
+      - 画像はMicroCMSに登録したものか、デフォルト画像
+      - サイドバーはSNSリンクと投稿のタグを表示
+  - vercelにデプロイし、webhookでmicroCMSと連携
+
+- サービスリンク
+https://blog-nextjs-microcms.vercel.app/
 
 - 今後
   - 読書感想や学習内容を投稿
   - 別ページを作成してReactの練習
+    - 本番環境でも動作確認をしたいため
+    - darkSiteなど。権限など作成してみれないようにする
 
+
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Getting Started
 
 First, run the development server:
